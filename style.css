@@ -20,20 +20,19 @@ html{
 
 .calendar{
     background-color: rgb(23, 24, 93);
-    width: 40em;
+    width: 50em;
     height: 70em;
     box-shadow: 0.4em 0.3em 0.9em rgb(0, 0, 0);
 }
 
 .month{
     background-color: rgb(86, 86, 192);
-    /* width: 100%; */
-    /* height: 10em; */
+    height: 15rem; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 0 4em; 
+    padding: 0 0.5em 0.4em; 
     text-shadow: 0 0.3rem 0.5rem rgba(31, 26, 26, 0.5);
 }
 
@@ -58,20 +57,59 @@ html{
 .weekdays {
     width: 100%;
     height: 3em;
-    padding: 0  0rem;
     display: flex;
     align-items: center;
     font-size: 1.5em
 }
 
 .weekdays div {
+    padding: .2em;
+    margin: 0.3em;
     font-size: 1.3em;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    width: calc(40em/7);
+    width: calc(50em/7);
     display: flex;
     justify-content: center;
     align-items: center;
     text-shadow: 0.1rem 0.1rem 0.1rem #f8bb06;
 } 
 
+.daysnumber{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 0.2em  0em;
+    
+
+}
+
+.daysnumber div {
+    margin: 0.4em;
+    width: calc(30em/7);
+    font-size: 1.4em;
+    letter-spacing: 0.17rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    text-shadow:0.1rem 0.1rem 0.1rem #d717a7;
+    transition: background-color 0.3s;
+
+}
+
+.prev-day,
+.next-days{
+    opacity:0.4;
+}
+.today{
+    background-color: rgb(86, 86, 192);
+}
+
+.daysnumber div:hover:not(.today){
+    background-color: rgb(86, 86, 192);
+    opacity: 0.5;
+    cursor:pointer;
+}
